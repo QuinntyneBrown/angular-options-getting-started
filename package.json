@@ -1,0 +1,22 @@
+{
+  "name": "angular-options-getting-started",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuinntyneBrown/angular-options-getting-started.git"
+  },
+  "author": "Quinntyne Brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QuinntyneBrown/angular-options-getting-started/issues"
+  },
+  "homepage": "https://github.com/QuinntyneBrown/angular-options-getting-started#readme",
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}
