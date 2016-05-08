@@ -2,8 +2,7 @@
 
 var app = angular.module("app", []);
 
-
-class EditorController {
+class RouteEditorController {
 
     title: string = "Angular Options Getting Started";
 
@@ -17,8 +16,16 @@ class EditorController {
             name: "Order Summary View Container Component"
         }
     ];
+    
+    entity: Route = new Route();
 
+}
+
+class Route {
     viewContainerComponent: ViewContainerComponent;
+    get viewContainerComponentId(): number {
+        return this.viewContainerComponent.id;
+    }
 }
 
 class ViewContainerComponent {
@@ -26,4 +33,4 @@ class ViewContainerComponent {
     name: string;
 }
 
-app.controller("editorController", [EditorController]);
+app.controller("routeEditorController", [RouteEditorController]);

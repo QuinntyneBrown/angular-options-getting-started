@@ -1,7 +1,7 @@
 /// <reference path="typings/angularjs/angular.d.ts" />
 var app = angular.module("app", []);
-var EditorController = (function () {
-    function EditorController() {
+var RouteEditorController = (function () {
+    function RouteEditorController() {
         this.title = "Angular Options Getting Started";
         this.viewContainerComponents = [
             {
@@ -13,12 +13,25 @@ var EditorController = (function () {
                 name: "Order Summary View Container Component"
             }
         ];
+        this.entity = new Route();
     }
-    return EditorController;
+    return RouteEditorController;
+}());
+var Route = (function () {
+    function Route() {
+    }
+    Object.defineProperty(Route.prototype, "viewContainerComponentId", {
+        get: function () {
+            return this.viewContainerComponent.id;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Route;
 }());
 var ViewContainerComponent = (function () {
     function ViewContainerComponent() {
     }
     return ViewContainerComponent;
 }());
-app.controller("editorController", [EditorController]);
+app.controller("routeEditorController", [RouteEditorController]);
